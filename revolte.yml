@@ -9,14 +9,9 @@ revolte:
           name: temp
           type: WEB_APP
           entryPoint: src/main.tsx
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
           properties:
-            health: /
-            port: 8080
-            loadBalancerMode: shared
+            indexPage: index.html
+            errorPage: index.html
     qa:
       branch: qa
       services:
@@ -24,14 +19,9 @@ revolte:
           name: temp
           type: WEB_APP
           entryPoint: src/main.tsx
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
           properties:
-            health: /
-            port: 8080
-            loadBalancerMode: shared
+            indexPage: index.html
+            errorPage: index.html
     staging:
       branch: staging
       services:
@@ -39,14 +29,9 @@ revolte:
           name: temp
           type: WEB_APP
           entryPoint: src/main.tsx
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
           properties:
-            health: /
-            port: 8080
-            loadBalancerMode: shared
+            indexPage: index.html
+            errorPage: index.html
     production:
       branch: main
       services:
@@ -54,15 +39,6 @@ revolte:
           name: temp
           type: WEB_APP
           entryPoint: src/main.tsx
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 50
-            autoScaling:
-              replica:
-                min: 1
-                max: 3
           properties:
-            health: /
-            port: 8080
-            loadBalancerMode: shared
+            indexPage: index.html
+            errorPage: index.html
