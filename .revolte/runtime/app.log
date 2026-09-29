@@ -1,10 +1,12 @@
-▲ Next.js 16.3.4 (Turbopack)
-- Local:         http://localhost:4173
-- Network:       http://0.0.0.0:4173
-✓ Ready in 250ms
-✓ Running next.config.ts took 22ms
 
- GET / 200 in 1695ms (next.js: 1593ms, application-code: 101ms)
- GET / 200 in 28ms (next.js: 7ms, application-code: 20ms)
- GET / 200 in 31ms (next.js: 5ms, application-code: 26ms)
- GET / 200 in 24ms (next.js: 1.9ms, application-code: 23ms)
+> template-foundation@0.1.0 dev
+> vite --host 0.0.0.0 --port 4173
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vite.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+  VITE v8.3.1  ready in 131 ms
+
+  ➜  Local:   http://localhost:4173/
+  ➜  Network: http://169.254.0.21:4173/  eth0

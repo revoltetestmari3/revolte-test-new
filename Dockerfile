@@ -18,11 +18,11 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=8080
 
-COPY --from=builder --chown=node:node /app/.next ./.next
+COPY --from=builder --chown=node:node /app/dist ./dist
 COPY --from=builder --chown=node:node /app/node_modules ./node_modules
 COPY --from=builder --chown=node:node /app/package.json ./package.json
 COPY --from=builder --chown=node:node /app/package-lock.json ./package-lock.json
 
 USER node
 EXPOSE 8080
-CMD ["npm", "start"]
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--port", "8080"]

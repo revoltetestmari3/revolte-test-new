@@ -1,21 +1,24 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-import nextVitals from 'eslint-config-next/core-web-vitals';
-import nextTs from 'eslint-config-next/typescript';
+import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  reactHooks.configs.flat['recommended-latest'],
+  {
+    plugins: {
+      'react-refresh': reactRefresh,
+    },
+    rules: {
+      'react-refresh/only-export-components': 'warn',
+    },
+  },
   prettierConfig,
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    '.next/**',
-    'out/**',
-    'build/**',
-    'next-env.d.ts',
-    'drizzle/**',
-  ]),
+  globalIgnores(['dist/**', 'build/**']),
 ]);
 
 export default eslintConfig;

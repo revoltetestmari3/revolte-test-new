@@ -1,5 +1,3 @@
-'use client';
-
 import { useCallback, useEffect, useState } from 'react';
 
 type Operator = '+' | '−' | '×' | '÷';
@@ -25,7 +23,7 @@ function formatNumber(value: number): string {
   });
 }
 
-export default function Home() {
+export default function App() {
   const [display, setDisplay] = useState('0');
   const [storedValue, setStoredValue] = useState<number | null>(null);
   const [operator, setOperator] = useState<Operator | null>(null);
