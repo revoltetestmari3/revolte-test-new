@@ -7,7 +7,7 @@ revolte:
       services:
         rid_1:
           name: temp
-          type: WEB_SERVICE
+          type: WEB_APP
           entryPoint: src/main.tsx
           specifications:
             cpu: 2
@@ -22,7 +22,7 @@ revolte:
       services:
         rid_1:
           name: temp
-          type: WEB_SERVICE
+          type: WEB_APP
           entryPoint: src/main.tsx
           specifications:
             cpu: 2
@@ -37,7 +37,7 @@ revolte:
       services:
         rid_1:
           name: temp
-          type: WEB_SERVICE
+          type: WEB_APP
           entryPoint: src/main.tsx
           specifications:
             cpu: 2
@@ -52,7 +52,7 @@ revolte:
       services:
         rid_1:
           name: temp
-          type: WEB_SERVICE
+          type: WEB_APP
           entryPoint: src/main.tsx
           specifications:
             cpu: 2
